@@ -24,6 +24,8 @@ steps:
   settings:
     repo: ikaruswill/gitea
     auto_tag: true
+    build_args:
+    - GITEA_VERSION=${DRONE_TAG}
     username:
       from_secret: docker_username
     password:
@@ -34,7 +36,6 @@ node_selector:
 
 trigger:
   ref:
-  - refs/heads/master
   - refs/tags/*
 
 ---
