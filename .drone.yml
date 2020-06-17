@@ -27,6 +27,8 @@ steps:
     auto_tag_suffix: linux-arm
     build_args:
     - GITEA_VERSION=${DRONE_TAG}
+    - BINARY_OS=linux
+    - BINARY_ARCH=arm-6
     username:
       from_secret: docker_username
     password:
@@ -69,6 +71,8 @@ steps:
     auto_tag_suffix: linux-arm64
     build_args:
     - GITEA_VERSION=${DRONE_TAG}
+    - BINARY_OS=linux
+    - BINARY_ARCH=arm64
     username:
       from_secret: docker_username
     password:
