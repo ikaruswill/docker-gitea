@@ -94,9 +94,6 @@ platform:
   os: linux
   arch: arm
 
-clone:
-  disable: true
-
 steps:
 - name: push manifest
   pull: always
